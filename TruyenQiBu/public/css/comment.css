@@ -1,0 +1,248 @@
+.Comment {
+    width: 100%;
+}
+
+.Comment .Send-Comment {
+    position: relative;
+    display: flex;
+}
+
+.Comment .Send-Comment input {
+    width: 100%;
+    height: 100%;
+}
+.Comment .Send-Comment svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: 0.2s linear;
+    fill: black
+}
+.Comment .Send-Comment svg:hover {
+    transform: scale(1.2);
+    fill: #0000F5;
+}
+
+.Comment .Comment-List {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.Comment .Comment-List .Comment-Item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Comment .Comment-List .Comment-Item .Comment-Info {
+    display: flex;
+}
+.Comment .Comment-List .Comment-Item .Comment-Info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 5px;
+    flex-shrink: 0;
+}
+.Comment .Comment-List .Comment-Item .Comment-Info .Info-User {
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.Comment .Comment-List .Comment-Item .Comment-Info .Info-User .User-Bot {
+    display: flex;
+    height: 50%;
+    align-items: first baseline;
+}
+
+.Comment .Comment-List .Comment-Item .Comment-Info .Info-User .User-Top {
+    display: flex;
+    align-items: last baseline;
+    height: 50%;
+}
+.Comment .Comment-List .Comment-Item .Comment-Info .Info-User span:last-child {
+    font-size: 16px;
+    padding: 2px 5px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.Comment .Comment-List .Comment-Item .Comment-Info .Info-User strong {
+    font-size: 24px;
+    
+}
+
+
+
+.gradient-text-1 {
+    
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 1), rgba(255, 0, 0, 0.5));
+    font-size: 2em;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-2 {
+    background: linear-gradient(
+        to right,
+        rgba(0, 191, 255, 0.8),        
+        rgb(108, 197, 253) ,   
+        rgb(129, 205, 252)   
+    );
+    font-size: 2em;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-3 {
+    background: linear-gradient(
+        to right,
+        rgba(138, 43, 226, 0.5),  /* Blue Violet (Tím Xanh) */
+        rgba(148, 0, 211, 1),      /* Dark Violet (Tím Đậm) */
+        rgba(186, 85, 211, 0.5)    /* Medium Orchid (Tím Cẩm Thạch) */
+    );
+    font-size: 2em;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-4 {
+    
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 1), rgba(0, 0, 255, 0.5));
+    font-size: 2em;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: #eaeaea;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    transform: translateX(-50%);
+}
+
+
+.Comment .Comment-List .Comment-Item .Comment-Content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    position: relative;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Main-Content {
+    border: 1px solid #eee;
+    background: linear-gradient(to right, #F5D6B6 30%, #F2D1A2 70%);
+    padding: 10px 15px;
+    border-radius: 9999px;
+    font-weight: 500;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Whereabouts ,
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Whereabouts span:first-child {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 1), rgba(255, 0, 0, 0.7));
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function div {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function div svg {
+    transition: 0.2s linear;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function .Reply:hover svg {
+    fill: blue
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function .Reply:hover {
+    color: blue;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function .Banned:hover {
+    color: red;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function .Banned:hover svg {
+    fill: red
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function .Report:hover {
+    color: orange;
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function .Report:hover svg {
+    fill: orange
+}
+.Comment .Comment-List .Comment-Item .Comment-Content .Content-Func .Function .Banned.Disable {
+    display: none;
+}
+
+
+.Comment .Comment-List .Comment-Item .Comment-Content .Replies-List {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Comment .Comment-List .Comment-Item .Reply-Item .Comment-Info img {
+    width: 55px;
+    height: 55px;
+}
+
+.Comment .Comment-List .Comment-Item .Reply-Item .Comment-Info .Info-User .User-Top strong {
+    font-size: 18px;
+}
+
+
+.Comment .Comment-List .Comment-Item .Reply-Item .Comment-Info .Info-User .User-Top svg {
+    margin: 0 5px;
+    height: 20px;
+    width: 20px;
+    transform: rotate(180deg);
+}
+
+.Comment .Comment-List .Comment-Item .Reply-Item .Comment-Info .Info-User .User-Bot span {
+    font-size: 14px;
+}
+
+.Comment .Comment-List .Comment-Item .Reply-Item .Comment-Content {
+    margin-left: 60px;
+}
+.Comment .Comment-List .Comment-Item .Reply-Item .Comment-Content::before {
+    background-color: transparent !important;
+}
+
+.Comment-Item {
+    margin-bottom: 20px;
+}
+.Reply-Item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eaeaea;
+}

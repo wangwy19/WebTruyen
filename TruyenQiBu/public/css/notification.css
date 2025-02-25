@@ -1,0 +1,36 @@
+.Notification {
+    width: 1400px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+
+}
+
+
+.Notification tr {
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+    margin: 0 10px;
+}
+
+.Notification tr .Text {
+    flex: 1;
+
+}
+.Notification tr .Read {
+    width: 20%;
+    border-left: 1px solid #eee;
+    text-align: center;
+}
+
+td {
+    border: none;
+}
+td a {
+    text-decoration: none !important;
+    color: orangered;
+    font-weight: bolder;
+}
+
+

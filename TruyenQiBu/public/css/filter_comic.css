@@ -1,0 +1,83 @@
+.no-outline:focus, 
+.no-outline:active {
+  outline: none;
+  box-shadow: none;
+
+}
+
+.Filter-Comic {
+    padding: 10px;
+}
+.Filter-Comic .Filter-Item {
+    margin-bottom: 10px;
+    column-gap: 10px;
+}
+.Filter-Comic .Filter-Item .accordion-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.Filter-Comic .Filter-Item.Accordion-Sort .accordion-body .Accordion-Item {
+
+    width: calc(calc(100% / 5) - 10px);
+}
+.Filter-Comic .Filter-Item.Accordion-Genre .accordion-body .Accordion-Item {
+
+    width: calc(calc(100% / 10) - 10px);
+}
+.Filter-Comic .Filter-Item .accordion-body .Accordion-Item {
+    margin: 5px;
+    display: flex;
+    justify-items: align-center;
+    justify-content: center;
+}
+.Filter-Comic .Filter-Item .accordion-body .Accordion-Item label {
+    padding-left: 10px;
+}
+.Filter-Comic .Filter-Item .accordion-body .Accordion-Item input {
+    border: #dee2e6 1px solid;
+}
+.Filter-Comic .Filter-Item .accordion-body .Accordion-Item input[type="checkbox"]:checked {
+    background-color: #dee2e6; /* Đổi màu nền thành cam */
+  
+}
+.Filter-Comic .Filter-Item .accordion-body .Accordion-Item input[type="radio"]:checked {
+    background-color: #dee2e6; /* Đổi màu nền thành cam */
+  
+}
+
+
+.Filter-Comic .Filter-Item input,
+.Filter-Comic .Filter-Item label {
+    transition: 0.2s linear;
+    padding-left: 20px;
+}
+.Filter-Comic .Filter-Item button {
+    transition: 0.2s linear;
+}
+.Filter-Comic .Filter-Item button:first-child {
+    flex: 1;
+}
+
+.accordion-collapse {
+    transition: 0.3s ease; /* Hiệu ứng mượt */
+}
+
+.List-Footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-Footer .pagination {
+    justify-content: center;
+    align-items: center;
+}
+
+.List-Footer .pagination button {
+    color: black;
+}
+
+.List-Footer .pagination button.Active {
+    background-color: #eaeaea;
+}

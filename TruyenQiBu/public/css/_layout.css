@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+}
+body::-webkit-scrollbar {
+    /* display: none;  */
+    /* tắt thanh croll */
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: white;
+    border-bottom: solid 1px #eaeaea;
+}
+
+.Nav {
+    display: flex;
+    width: 1400px;
+    margin: 0 auto;
+    height: 60px;
+}
+.Nav .Logo {
+    text-align: center;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.Nav .Logo img {
+    width: 100%;
+    height: 50px;
+}
+
+.Nav .Nav-List {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    font-size: larger;
+    padding: 0;
+    margin: 0;
+}
+
+.Nav .Nav-List .Nav-Item {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.Nav .Nav-List .Nav-Item a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    padding: 10px 10px;    
+
+}
+
+.Nav .Nav-List .Nav-Item:hover {
+    background-color: #f2f2f2;
+}
+.Nav .Nav-List .Nav-Item:hover .Dropdown-Content {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s linear;
+}
+
+
+.Nav .Nav-List .Dropdown-Content {
+    top: 100%;
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+
+}
+.Nav .Nav-List .Dropdown-Content .Dropdown-Item {
+    width: calc(calc(100% / 6));
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    transition: 0.2s linear;
+}
+.Nav .Nav-List .Dropdown-Content .Dropdown-Item a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    padding: 10px;
+}
+.Nav .Nav-List .Dropdown-Content .Dropdown-Item:hover {
+    background-color: #d6d6d6;
+    border-radius: 10px;
+}
+
+.Nav .Search {
+    margin-left: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Nav .Search input {
+    width: 400px;
+    font-size: 16px;
+    border-radius: 5px;
+    line-height: 0;
+    padding: 5px;
+    border: #d6d6d6 1px solid;
+    height: 60%;
+}
+
+.Nav .Search .Search-Icon {
+    position: absolute;
+    right: 0;
+    height: 50%;
+    width: 30px;
+    right: 0;
+    cursor: pointer;
+    fill: silver;
+    transition: 0.2s linear;
+    opacity: 0;
+    visibility: hidden;
+}
+/* .Nav .Search input:focus ~ .Search-Icon svg{
+    fill: black;
+} */
+.Nav .Search input:focus ~ .Search-Icon {
+    visibility: visible;
+    opacity: 1;
+
+}
+.Nav .Search .Filter {
+    height: 60%;
+    padding: 5px;
+    margin-right: 5px;
+}
+.Nav .Search .Filter svg {
+    position: static;
+    height: 100%;
+    fill: black;
+}
+
+.Nav .Login {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.Nav .Login svg {
+    height: 40px;
+    fill: rgba(192, 192, 192, 0.849);
+}
+.Nav .Login img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.Nav .Login .Note {
+    padding: 6px;
+    top: 5px;
+    right: -10px;
+}
+.Nav .Login .Avatar .Profile-Menu {
+    z-index: 10;
+
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s linear;
+    padding: 1px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    width: 500%;
+    left: 50%; /* Căn giữa */
+    transform: translateX(-50%);
+
+    top: calc(100% + 10px);
+}
+.Nav .Login .Avatar .Profile-Menu::before {
+    content: '';
+    background-color: transparent;
+    display: flex;
+    height: 10px;
+    width: 100%;
+    top: -10px;
+    left: 0;
+    position: absolute;
+}
+
+.Nav .Login .Avatar .Profile-Menu::after {
+    content: '';
+    position: absolute;
+    top: -10px; /* Đặt tam giác ngay dưới menu */
+    left: 50%; /* Căn giữa */
+    transform: translateX(-50%); /* Đảm bảo tam giác căn giữa */
+    
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #eaeaea; /* Màu của tam giác */
+    
+    /* Kích thước của tam giác */
+    width: 10px;
+    height: 10px;
+  }
+
+.Nav .Login .Avatar:hover .Profile-Menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.Nav .Login .Profile-Menu .Menu-Item {
+    display: flex;
+    align-items: center;
+}
+.Nav .Login .Profile-Menu .Menu-Item a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    padding: 2px 7px;
+}
+
+.Nav .Login .Profile-Menu .Menu-Item svg{
+    margin-right: 5px;
+}
+
+.Nav .Login .Profile-Menu .Menu-Item:hover {
+    background-color: #f2f2f2;
+}
+
+/* modal */
+.btn-close:focus {
+    outline: none;
+    box-shadow: none; 
+}
+
+.btn-gg {
+    color: black ;
+    background-color: white ;
+    width: 100%;
+    transition: 0.2s linear;
+    border-color: black;
+}
+.btn-gg:hover {
+    background-color: #f2f2f2;
+    color: black ;
+    border-color: black;
+}
+
+footer {
+    padding: 0 50px;
+    height: 270px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-top: solid 1px #eaeaea;
+    display: flex;
+    margin-top: auto;
+}
+
+.Footer-Left, .Footer-Right, .Footer-Center {
+    width: calc(100% / 3);
+}
+
+.Footer-Right {
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+}
+.Footer-Left {
+    padding: 20px;
+}
+.Footer-Left .Contact{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center ;
+}
+.Footer-Left a {
+    text-decoration: none ;
+    display: inline-block;
+
+}
+.Footer-Left a svg {
+    width: 100px;
+    height: auto !important;
+}
+
+.blurred-background {
+    background: rgba(255, 255, 255, 0.5); /* Nền trắng trong suốt */
+    backdrop-filter: blur(10px); /* Hiệu ứng mờ */
+}
+
+.line {
+    width: 50%; /* Chiều dài của đường thẳng */
+    height: 1px; /* Độ dày của đường thẳng */
+    background-color: black; /* Màu sắc */
+    margin: 10px 0; /* Khoảng cách trên và dưới là 10px */
+    transform: translateX(50%);
+}
+
+.Form-Auth {
+    display: flex; 
+    overflow-x: hidden !important;
+}
+
+.Login-Form, .Signup-Form {
+    display: flex; 
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.Form-Auth a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s linear;
+}
+
+.Form-Auth a:hover {
+    color: blue;
+}

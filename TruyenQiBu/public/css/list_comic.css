@@ -1,0 +1,30 @@
+.List-Comic {
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #eaeaea;
+    margin-bottom: 5px;
+}
+.List-Title {
+    flex-shrink: 0;
+}
+.List-Content {
+    flex: 1;
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.List-Content .List-Item {
+    width: calc(calc(100% / 6) - 20px);
+    margin:10px;
+    display: flex;
+}
+
+.List-Comic .List-Footer {
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+

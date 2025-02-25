@@ -1,0 +1,46 @@
+.Manage-Account {
+    width: 1400px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.Manage-Form {
+    display: flex;
+}
+
+.Form-Left {
+    width: 40%;
+    padding:20px 100px;
+    text-align: center;
+}
+
+.Form-Left img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.Form-Left button {
+    margin-top: 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+.Form-Left button.Appearance {
+    visibility: visible;
+    opacity: 1;
+}
+
+.Form-Right {
+    padding: 20px;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Form-Right .Row {
+    display: flex;
+    column-gap: 10px;
+}

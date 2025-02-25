@@ -1,0 +1,192 @@
+.Detail-Chapter {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+.Detail-Chapter nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.Detail-Chapter .Title-Chapter h3{
+    text-transform: uppercase ;
+    text-align: center;
+    margin: 5px 0;
+}
+.Detail-Chapter .Control-Chapter .Control {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 50px;
+}
+.Detail-Chapter .Control-Chapter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid silver;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    transition: 0.2s linear;
+}
+.Detail-Chapter .Control-Chapter .Chapter-Number {
+    padding: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.Detail-Chapter .Control-Chapter svg{
+    height: 30px;
+    width: 30px;
+}
+.Detail-Chapter .Control-Chapter .Chapter-Prev ,
+.Detail-Chapter .Control-Chapter .Chapter-Next {
+    padding: 5px;
+    cursor: pointer;
+}
+.Detail-Chapter .Control-Chapter .Chapter-Prev svg ,
+.Detail-Chapter .Control-Chapter .Chapter-Next svg {
+    transition: 0.2s linear;
+}
+.Detail-Chapter .Control-Chapter .Chapter-Prev:hover svg ,
+.Detail-Chapter .Control-Chapter .Chapter-Next:hover svg {
+    fill: blue;
+}
+
+.Detail-Chapter .Control-Chapter .Chapter-Next svg {
+    transform: rotate(180deg);
+}
+
+
+
+
+.Select-Chapters {
+    width: 100%;
+    height: 0px;
+    position: relative;
+    border: solid 1px #dedede;
+    transition: 0.3s ease;
+    background-color: white;
+    z-index: 10;
+    display: flex;
+}
+
+.Select-Chapters .Control-Left,
+.Select-Chapters .Control-Right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-shrink: 0;
+    display: none;
+}
+
+.Select-Chapters .Control-Left {
+    left: 0;
+}
+.Select-Chapters .Control-Left svg {
+    transform: rotate(180deg);
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.2s linear;
+
+}
+.Select-Chapters .Control-Right svg {
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.Select-Chapters .Control-Left svg:hover,
+.Select-Chapters .Control-Right svg:hover {
+    fill: orangered;
+}
+.Select-Chapters .Control-Right {
+    right: 0;
+}
+
+.Select-Options {
+    height: 100%;
+    width: 1000px;
+    margin: 0 auto;
+    overflow-x: scroll;
+}
+.Select-Options::-webkit-scrollbar {
+    display: none; 
+    
+}
+
+.Select-Options .List-Options {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.List-Options .Option-Item {
+    flex-shrink: 0;
+    width: calc(calc(100% / 6) - 20px);
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none !important;
+    color: black ;
+}
+.List-Options .Option-Item div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s linear;
+
+}
+.List-Options .Option-Item div:hover {
+    box-shadow: 0px 0px 3px 3px orangered;
+
+}
+
+.List-Options .Option-Item div.Active {
+    box-shadow: 0px 0px 3px 3px yellowgreen;
+}
+.List-Options .Option-Item  img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+.List-Options .Option-Item  strong {
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+}
+
+
+.Main-Chapter {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Main-Chapter img {
+    width: 600px;
+    height: auto;
+}
+
+.Detail-Chapter .Control-Chapter.Sticky-Section {
+    position: fixed;
+    height: 60px;
+    width: 1400px;
+    top: 1px;
+    background-color: white;
+    z-index: 10;
+    opacity: 0;
+}
+.Detail-Chapter .Control-Chapter.Opacity-Section {
+    opacity: 1;
+}

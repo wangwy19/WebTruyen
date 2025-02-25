@@ -1,0 +1,170 @@
+.Slide {
+    width: 1400px;
+    margin: 0 auto;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #eaeaea;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.Slide-Title {
+    flex-shrink: 0;
+}
+
+
+.Slide-List {
+    flex: 1;
+    display: flex;
+    padding: 5px 10px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* .Slide-List::-webkit-scrollbar {
+    display: none;
+} */
+.Slide-Control {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
+
+.Slide-Control .Slide-Button-Pre,
+.Slide-Control .Slide-Button-Next {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #eaeaea;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 0.2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Slide-Control .Slide-Button-Pre svg {
+    transform: rotate(180deg);
+}
+
+.Slide-Control .Slide-Button-Pre:hover,
+.Slide-Control .Slide-Button-Next:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.Slide-Control .Slide-Button-Pre {
+    left: 0;
+}
+
+.Slide-Control .Slide-Button-Next {
+    right: 0;
+}
+
+.Slide-Item {
+    width: calc(calc(100% / 5) - 20px);
+    flex-shrink: 0;
+    margin: 0 10px;
+    display: flex;
+}
+
+
+.Comic {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Comic .Comic-Top {
+    height: 70%;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.Comic .Comic-Top:hover img {
+    transform: scale(1.1);
+}
+
+.Comic .Comic-Top img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+
+}
+
+.Comic .Comic-Top .Comic-Engagement {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 5px;
+    color: white;
+}
+
+.Comic .Comic-Bot {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: #eaeaea solid 1px;
+}
+
+.Comic .Comic-Bot .Comic-Name {
+
+    margin: 0;
+    padding: 3px 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    overflow: hidden;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Comic .Comic-Bot .Chapters {
+    margin-top: auto !important;
+    height: 50%;
+    padding: 3px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Comic .Comic-Bot .Chapters .Chapter {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    height: 50%;
+}
+
+.Comic .Comic-Bot .Chapters .Chapter:hover {
+    /* text-decoration: underline; */
+    color: silver;
+}
+
+.truncate {
+    display: -webkit-box;
+    /* Để sử dụng với webkit-line-clamp */
+    -webkit-box-orient: vertical;
+    /* Định hướng theo chiều dọc */
+    -webkit-line-clamp: 2;
+    /* Giới hạn số dòng là 2 */
+    overflow: hidden;
+    /* Ẩn văn bản vượt quá */
+    text-overflow: ellipsis;
+    /* Hiển thị dấu ba chấm nếu có văn bản bị cắt */
+}

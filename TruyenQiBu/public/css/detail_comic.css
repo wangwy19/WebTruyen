@@ -1,0 +1,144 @@
+.Detail-Comic {
+    padding: 10px;
+    width: 1400px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Detail-Comic .Detail-Info {
+    width: 100%;
+    display: flex;
+}
+
+.Detail-Comic .Detail-Info .Content-Left {
+    width: 30%;
+    position: relative;
+}
+.Detail-Comic .Detail-Info .Content-Left .Detail-Engagement {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 5px;
+}
+.Detail-Comic .Detail-Info .Content-Left .Detail-Engagement span {
+    font-size: 20px;
+    color: white;
+}
+
+
+.Detail-Comic .Detail-Info .Content-Left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.Detail-Comic .Detail-Info .Content-Right {
+    width: 70%;
+    padding: 15px;
+    border: 1px solid #eaeaea  ;
+    display: flex;
+    flex-direction: column;
+}
+.Detail-Comic .Detail-Info .Content-Right h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.Detail-Comic .Detail-Info .Content-Right .Categories {
+    flex-wrap: wrap;
+}
+.Detail-Comic .Detail-Info .Content-Right .Categories .Category {
+    padding: 7px 12px;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.Detail-Comic .Detail-Info .Content-Right .Detail-Sumary {
+    font-size: 20px;
+}
+.Detail-Comic .Detail-Info .Content-Right .Btn-Read {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-top: auto;
+    column-gap: 10px;
+}
+.Detail-Comic .Detail-Info .Content-Right .Btn-Read a {
+    border: 1px solid #dedede;
+    transition: 0.2s linear;
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.Detail-Comic .Detail-Chapters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Detail-Comic .Detail-Chapters .List-Chapters {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    max-height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    border: 1px solid #dedede;
+}
+
+.Detail-Comic .Detail-Chapters .List-Chapters .Chapter-Item {
+    width: calc(calc(100% /3) - 10px);
+    margin: 5px;
+    display: flex;
+    border: 1px solid #eaeaea;
+    padding: 5px;
+    column-gap: 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s linear;
+}
+.Detail-Comic .Detail-Chapters .List-Chapters .Chapter-Item:hover {
+    background-color: #eaeaea;
+}
+.Detail-Comic .Detail-Chapters .List-Chapters .Chapter-Item .Item-Left {
+    width: 15%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Detail-Comic .Detail-Chapters .List-Chapters .Chapter-Item .Item-Right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding-right: 10px;
+    row-gap: 5px;
+}
+.Detail-Comic .Detail-Chapters .List-Chapters .Chapter-Item .Item-Right .Chapter-Title {
+    height: 50%;
+    display: flex;
+    align-items: last baseline;
+}
+.Detail-Comic .Detail-Chapters .List-Chapters .Chapter-Item .Item-Right .Chapter-Summary {
+    height: 50%;
+    display: flex;
+    align-items: first baseline;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.Detail-Comic .Detail-Chapters .List-Chapters .Chapter-Item .Item-Right .Chapter-Summary span {
+    display: flex;
+    align-items: center;
+}
