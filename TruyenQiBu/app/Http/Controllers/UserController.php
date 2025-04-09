@@ -18,7 +18,6 @@ class UserController extends Controller
 
     public function index()
     {
-
         $users = user::with(['role'])->where('id', "!=", 1)->get();
         return view('admin.list_user_admin', compact('users'));
     }
@@ -30,7 +29,6 @@ class UserController extends Controller
 
     public function StoreUser(Request $request)
     {
-
         $check = user::where('email', "=", $request->email)->first();
         if ($check != null) {
             session()->flash('fail_email', 'Email đã tồn tại!');
@@ -137,11 +135,11 @@ class UserController extends Controller
             $user = new user();
             $user->fullname = 'user';
             $user->email = $req->email;
-            $user->password = Str::random(6);;
+            $user->password = Str::random(6);
             $user->role_id = 3;
             $user->save();
         } else {
-            $user->password = Str::random(6);;
+            $user->password = Str::random(6);
         }
         Mail::to($user->email)->send(new RefreshPasswordMail($user->email, $user->password));
         return response()->json([

@@ -61,11 +61,16 @@
             </p>
 
             <div class="Btn-Read">
-                <a class="btn btn-light no-outline" href="" class="Read-First">Đọc từ đầu</a>
+                <a class="btn btn-light no-outline"
+                    href="@if(session('user') && $comic->chapters->count() > 0){{route('user.chapterpage',['slug' => $comic->slug, 'chapter_number'=>$comic->chapters->first()->chapter_number])}}@else#@endif"
+                    class="Read-First"
+                    @if(!session('user'))onclick="alert('Vui lòng đăng nhập để đọc truyện!'); return false;" @endif
+                    @if($comic->chapters->count() == 0)onclick="alert('Truyện chưa được cập nhật!'); return
+                    false;"@endif>Đọc từ đầu</a>
                 <a class="btn btn-light no-outline"
                     href="{{route('user.add_favorite', ['comic_id' => $comic->id, 'slug' => $comic->slug])}}"
                     class="Read-New"
-                    @if(App\Http\Controllers\UserController::checkFavorite($comic->id,session('user')->id))
+                    @if(session()->has('user') && App\Http\Controllers\UserController::checkFavorite($comic->id, session('user')->id))
                     style="background-color:pink; color:white;"
                     @endif
                     >Yêu thích
@@ -80,8 +85,10 @@
 
         <div class="List-Chapters">
             @foreach($comic->chapters as $item)
-            <a href="{{route('user.chapterpage',['slug' => $comic->slug, 'chapter_number'=>$item->chapter_number])}}"
-                class="Chapter-Item">
+            <a href="@if(session('user')){{route('user.chapterpage',['slug' => $comic->slug, 'chapter_number'=>$item->chapter_number])}}@else#@endif"
+                class="Chapter-Item"
+                @if(!session('user'))onclick="alert('Vui lòng đăng nhập để đọc truyện!'); return false;" @endif>
+
                 <div class="Item-Left">
                     <svg xmlns="http://www.w3.org/2000/svg" height="" viewBox="0 -960 960 960" width="" fill="">
                         <defs>

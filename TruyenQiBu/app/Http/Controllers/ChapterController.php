@@ -20,7 +20,6 @@ class ChapterController extends Controller
     }
     public function AddChapter()
     {
-
         $comics = comic::with(['chapters' => function ($query) {
             $query->orderBy('chapter_number', 'desc');
         }])->get();
@@ -117,6 +116,7 @@ class ChapterController extends Controller
         $user = user::findOrFail(session('user')->id);
         $user->read += 1;
         $user->save();
+        // dd($chapters);
 
         return view('user.chapterpage', compact('comic', 'chapters'));
     }

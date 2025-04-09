@@ -73,7 +73,7 @@
 
     <div class="Main-Chapter">
         @foreach($chapters->images as $item)
-        <img src="{{asset('imgs/chapters/'.$comic->id.'/'.$chapters->id.'/'.$item->name)}}" alt="">
+        <img src="{{asset('imgs/chapters/'.$comic->id.'/'.$chapters->chapter_number.'/'.$item->name)}}" alt="">
         @endforeach
 
     </div>

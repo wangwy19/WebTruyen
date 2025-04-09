@@ -467,11 +467,7 @@
                                     <a id="btnChangeFormLogin" class="no-outline p-3 text-center" style="cursor:pointer;">Đã có tài khoản</a>
                                 </div>
                             </div>
-                        </form>
-
-
-
-                    
+                        </form>                  
                     </div>
                 </div>
             </div>
@@ -534,18 +530,9 @@
                             alert('Đăng ký thành công!');
                             // Thực hiện thêm hành động nếu cần
                         })
-
                 })
             });
-
-
-
-
-
-
-
             openModalBtn.click();
-
         });
     </script>
 </body>
